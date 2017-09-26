@@ -185,7 +185,7 @@
 
 </script>
 <head>
-    <title>仓库管理系统→登录</title>
+    <title>登录页</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="/static/css/login2.css" rel="stylesheet" type="text/css"/>
@@ -193,7 +193,7 @@
 <html>
 <body>
 
-<h1>仓库管理系统登陆注册<sup>2016</sup></h1>
+<h1>登录注册的地方<sup>2017</sup></h1>
 
 <div class="login" style="margin-top:50px;">
 
