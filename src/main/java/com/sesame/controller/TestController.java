@@ -4,6 +4,7 @@ import com.sesame.bean.User;
 import com.sesame.http.ResponseObj;
 import com.sesame.service.TestService;
 import com.sesame.utils.JsonUtils;
+import com.sesame.utils.L;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,8 @@ public class TestController {
 	@RequestMapping(value = "test")
 	public String testStr(@RequestParam(required = false) String s) {
 		testService.testSth();
-		System.out.println("接收到的参数：" + s);
+		L.i("杭杭杭杭杭杭杭杭杭杭杭杭杭杭杭杭杭杭杭杭杭杭");
+		L.e("eeeeeeeeeeeeeeeeeeeee");
 		return "{\"key\":\"123abc小明\"}";
 	}
 
@@ -42,5 +44,11 @@ public class TestController {
 		System.out.println("these's abc method");
 		return "abc";
 	}
+
+	@RequestMapping("testUpload")
+	public String toUpload(){
+		return "test_upload";
+	}
+
 
 }

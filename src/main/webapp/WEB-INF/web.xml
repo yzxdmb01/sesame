@@ -52,14 +52,14 @@
     </servlet-mapping>
     <!-- spring框架提供的字符集过滤器 -->
     <!-- spring Web MVC框架提供了org.springframework.web.filter.CharacterEncodingFilter用于解决POST方式造成的中文乱码问题  -->
-    <!--<filter>
+    <filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
         <init-param>
             <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
         </init-param>
-        &lt;!&ndash; force强制，促使 &ndash;&gt;
+        <!-- force强制，促使 -->
         <init-param>
             <param-name>forceEncoding</param-name>
             <param-value>true</param-value>
@@ -68,7 +68,7 @@
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
+    </filter-mapping>
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
