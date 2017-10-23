@@ -9,8 +9,17 @@
 <html>
 <head>
     <title>测试上传</title>
+    <style>
+
+    </style>
 </head>
 <body>
-
+<form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="uploadFile"><br><br>
+    <input type="file" name="uploadFile"><br><br>
+    <input type="file" name="uploadFile"><br><br>
+    <button type="submit">提交</button>
+</form>
+<a href="${pageContext.request.contextPath }/download">下载</a>
 </body>
 </html>
