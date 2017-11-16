@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>RESTful方法测试</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/signin.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="../js/jquery.1.7.2.min.js"></script>
+    <script>
+        var url = "/method/"
+
+        function testGet() {
+            $.get(url + "get", function (msg) {
+                console.debug(msg);
+            });
+        }
+
+        function testPost() {
+            $.post(url,
+                {
+                    id: "post"
+                },
+                function (msg, status) {
+                    console.debug("msg:", msg);
+                    console.debug("status:", status)
+                });
+        }
+
+        function testDel() {
+            $.ajax({
+                url: url+'/'+"删除嘿嘿",
+                type: "delete",
+                success: function (msg, status) {
+                    console.debug("msg:", msg);
+                    console.debug("status:", status)
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="testGet()">GET&nbsp;&nbsp;方法</button>
+    <button class="btn btn-lg btn-primary btn-block" onclick="testPost()">POST方法</button>
+    <button class="btn btn-lg btn-primary btn-block" onclick="testDel()">DEL&nbsp;&nbsp;方法</button>
+
+</div> <!-- /container -->
+</body>
+</html>

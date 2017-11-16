@@ -13,15 +13,18 @@ public class MainController {
 
 	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String toLogin() {
-		return "login";
+		return "singnin";
 	}
 
-	@RequestMapping("loginAction")
+	@RequestMapping(value = "doLogin", method = RequestMethod.POST)
 	@ResponseBody
-	public String loginAction() {
+	public String doLogin() {
 		responseObj = new ResponseObj();
 		responseObj.setCode(ResponseObj.SUCCESS);
 		responseObj.setMsg("登录成功");
 		return JsonUtils.toJson(responseObj);
 	}
+
+
+
 }

@@ -157,6 +157,13 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${org.freemarker.version}</version>
+        </dependency>
+
         <!-- 4)Spring test -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -230,6 +237,7 @@
         <org.json.version>20160810</org.json.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
         <org.springframework.version>4.3.2.RELEASE</org.springframework.version>
+        <org.freemarker.version>2.3.21</org.freemarker.version>
         <redis.clients.version>2.9.0</redis.clients.version>
         <com.dyuproject.protostuff.version>1.0.8</com.dyuproject.protostuff.version>
         <developer.organization><![CDATA[scengine]]></developer.organization>

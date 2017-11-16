@@ -8,10 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script src="../../static/js/jquery-3.1.1.min.js"/>
     <title>测试上传</title>
     <style>
-
     </style>
+    <script>
+
+
+    </script>
 </head>
 <body>
 <form method="post" action="/upload" enctype="multipart/form-data">
@@ -21,5 +25,7 @@
     <button type="submit">提交</button>
 </form>
 <a href="${pageContext.request.contextPath }/download">下载</a>
+
+
 </body>
 </html>
