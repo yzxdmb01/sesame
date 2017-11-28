@@ -3,16 +3,13 @@ package com.sesame;
 import com.sesame.http.ResponseObj;
 import com.sesame.utils.JsonUtils;
 import com.sesame.utils.L;
+import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.util.StringUtils;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class SimpleTest {
-
 	@Test
 	public void testStrEmpty() {
 		String a = "a";
@@ -39,18 +36,32 @@ public class SimpleTest {
 			oldArray[i] = i;
 		}
 		int[] newArray = new int[20];
-		System.arraycopy(oldArray,0,newArray,0,oldArray.length);
+		System.arraycopy(oldArray, 0, newArray, 0, oldArray.length);
 		for (int i : newArray) {
 			System.out.println(i);
 		}
 	}
 
 	@Test
-	public void testProperties(){
+	public void testProperties() {
 		String path = "test";
 		ResourceBundle resourceBundle = ResourceBundle.getBundle(path);
 
 		System.out.println(resourceBundle.getString("redis.port"));
+	}
+
+	@Test
+	public void testConsoleInput() {
+		System.out.println("请输入：");
+		Scanner scaner = new Scanner(System.in);
+		System.out.println("输入的内容是：");
+	}
+
+	public static void main(String[] args) {
+		System.out.println("请输入：");
+		Scanner scaner = new Scanner(System.in);
+		String read = scaner.nextLine();
+		System.out.println("输入的内容是：" + read);
 	}
 
 
